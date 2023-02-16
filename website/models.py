@@ -35,7 +35,7 @@ class Publication(models.Model):
     year = models.CharField(max_length=255)
     number_of_authors = models.IntegerField()
     authors = models.CharField(max_length=510)
-    #feature_image = models.ImageField()
+    feature_image = models.ImageField(upload_to='publication_pics', blank=True, null=True)
 
     def __str__(self):
         return f'{self.title}'
