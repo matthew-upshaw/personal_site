@@ -30,7 +30,7 @@ env.read_env(env_file)
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = env('DEBUG') == 'True'
 
 ALLOWED_HOSTS = [env('IP_ADDRESS')]
 
@@ -135,6 +135,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SECURE_SSL_REDIRECT = env('SECURE_SSL_REDIRECT')
-SESSION_COOKIE_SECURE = env('SESSION_COOKIE_SECURE')
-CSRF_COOKIE_SECURE = env('CSRF_COOKIE_SECURE')
+SECURE_SSL_REDIRECT = env('SECURE_SSL_REDIRECT') == 'True'
+SESSION_COOKIE_SECURE = env('SESSION_COOKIE_SECURE') == 'True'
+CSRF_COOKIE_SECURE = env('CSRF_COOKIE_SECURE') == 'True'
