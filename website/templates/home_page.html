@@ -1,6 +1,94 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
-    <h1>Hello World</h1>
+    <div class="row">
+        <div class="col-lg-4 col-md-12">
+            <div class="row">
+                <img src="{% static 'website/img/home_picture.jpg' %}" class="img-fluid img-thumbnail">
+            </div>
+            <div class="row">
+                <div class="d-flex justify-content-center mt-2">
+                    <ul class="list-group list-group-horizontal">
+                        <a class="list-group-item" href="https://www.linkedin.com/in/matthewtupshaw/"
+                            target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a class="list-group-item"
+                            href="https://scholar.google.com/citations?hl=en&user=znujJukAAAAJ" target="_blank">
+                            <i class="bi bi-mortarboard"></i>
+                        </a>
+                        <a class="list-group-item" href="https://github.com/matthew-upshaw" target="_blank">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a class="list-group-item" href="mailto:matthew@matthewtupshaw.com">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <div class="row">
+                <h2>
+                    About
+                </h2>
+                <p>
+                    My name is Matthew Upshaw, and I am an experienced Engineer Intern (LAPELS E.I.0033876) with two
+                    years of experience in both commercial and industrial structural design. I earned my B.S. in
+                    Civil Engineering from Louisiana Tech University in Spring 2018 and subsequently earned my Ph.D.
+                    in Civil Engineering with a Structures concentration from Louisiana State University. During my
+                    time at LSU, I worked as a graduate student research assistant exploring ways to improve the
+                    performance of recycled aggregate concrete, mainly through the use of geopolymer binders created
+                    from waste materials. I also worked full-time as an Engineer Intern at Fox-Nesbit Engineering,
+                    LLC in Baton Rouge, LA while completing my doctoral research. I also hold memberships in ASCE,
+                    ACI, and AISC. Explore my site to learn more about my education, research, and experience. Also,
+                    feel free to contact me using the form below or at the contact information listed below as well.
+                    Thanks for visiting!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-lg-12">
+            <h2>
+                Featured Research
+            </h2>
+            <h4>
+                "Evaluation of Fresh and Mechanical Properties of a Metakaolin-Based Geopolymer Recycled Aggregate
+                Concrete"
+            </h4>
+            <p>
+                M. Upshaw, A. Okeil, and C.S. Cai <em>(in preparation)</em>
+            </p>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <img src="{% static 'website/img/grac_cover_pic.png' %}" class="img-fluid img-thumbnail">
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <p class="text-justify">
+                        The results of an experimental study of the effect of differing ratios of natural aggregate
+                        replacement with recycled concrete aggregates on the properties of both ordinary Portland cement
+                        concrete and a metakaolin-based geopolymer concrete are presented in this paper. Utilizing both
+                        coarse and fine recycled concrete aggregates in fresh concrete mixes can positively impact the
+                        sustainability of the concrete industry by alleviating strain on landfills and reducing carbon
+                        emissions. However, doing so has detrimental impacts on several concrete properties such as
+                        density, compressive strength, static elastic modulus, and durability. This study aims to
+                        address those issues by incorporating a metakaolin-based geopolymer binder with silica fume and
+                        calcium compound additives. Results of the study showed that the detrimental impacts on
+                        important concrete properties can be dampened by the inclusion of this geopolymer binder.
+                        Additionally, it was shown that minimum concrete requirements set forth by ACI 318-14 can be
+                        achieved utilizing the developed geopolymer binder with up to 70% by weight of the total
+                        concrete aggregates replaced with recycled concrete aggregates. This study also demonstrates the
+                        efficacy of using calcium compounds to improve the mechanical properties of geopolymer concretes
+                        cured in ambient conditions. Overall, conclusions can be drawn from this study that recycled
+                        concrete aggregates can be utilized at high replacement ratios for general structural concrete
+                        applications.
+                    </p>
+                    <small><em>**Contact me for full pre-print paper.**</em></small>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock content %}

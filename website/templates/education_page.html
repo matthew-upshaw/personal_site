@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container mb-5">
+        <h3>Education</h3>
+        <hr>
+        {% for education in educations %}
+            <h5>{{ education.degree }} - {{ education.major }}</h5>
+            <p><b>{{ education.school }}</b>, <em>{{ education.city }}, {{ education.state }}</em></p>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
