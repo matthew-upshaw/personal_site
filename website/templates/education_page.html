@@ -6,11 +6,37 @@
         <h3>Education</h3>
         <hr>
         {% for education in educations %}
-            <h5>{{ education.degree }} - {{ education.major }}</h5>
-            <p>
-                <b>{{ education.school }}</b>, <em>{{ education.city }}, {{ education.state }}</em><br/>
-                Awarded {{ education.graduation_date }}
-            </p>
+            <div class="containter mb-5">
+                <div class="row">
+                    <h5>{{ education.degree }} - {{ education.major }}</h5>
+                    <p>
+                        <b>{{ education.school }}</b>, <em>{{ education.city }}, {{ education.state }}</em><br/>
+                        Awarded {{ education.graduation_date }}
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <p><b>Key Courses</b></p>
+                        <ul class="list-group">
+                            {% for course in education.get_course_list %}
+                                <li class="list-group-item">
+                                    {{ course }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <p><b>Awards</b></p>
+                        <ul class="list-group">
+                            {% for award in education.get_award_list %}
+                                <li class="list-group-item">
+                                    {{ award }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </div>
 

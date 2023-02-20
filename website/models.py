@@ -23,9 +23,17 @@ class Education(models.Model):
     state = models.CharField(max_length=255)
     date_started = models.DateField()
     graduation_date = models.DateField()
+    course = models.CharField(max_length=5000)
+    award = models.CharField(max_length=5000)
 
     def __str__(self):
         return f'{self.school} - {self.degree}'
+    
+    def get_course_list(self):
+        return self.course.split(';')
+    
+    def get_award_list(self):
+        return self.award.split(';')
 
 
 class Publication(models.Model):
