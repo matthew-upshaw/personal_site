@@ -1,0 +1,21 @@
+body {
+  margin-top: 5rem;
+}
+  
+.bg-header {
+  background-color: #99a6bf;
+}
+
+.publication-section {
+  margin-bottom: 2rem;
+}
+
+.page-footer {
+  height: 3rem;
+  background-color: #99a6bf;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}

@@ -36,6 +36,8 @@ class Publication(models.Model):
     number_of_authors = models.IntegerField()
     authors = models.CharField(max_length=510)
     feature_image = models.ImageField(upload_to='publication_pics', blank=True, null=True)
+    doi = models.CharField(max_length=255, blank=True, null=True)
+    is_published = models.BooleanField(default=True)
 
     def __str__(self):
         return f'{self.title}'
