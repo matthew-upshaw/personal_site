@@ -16,8 +16,8 @@
                     </div>
                     <div class="row">
                         {% if publication.feature_image %}
-                            <div class="col-lg-6 col-md-12">
-                                <img src="{{ publication.feature_image.url }}">
+                            <div class="col-lg-6 col-md-12 img">
+                                <img src="{{ publication.feature_image.url }}" class="img-fluid">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <p>{{ publication.abstract }}</p>
