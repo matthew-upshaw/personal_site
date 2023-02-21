@@ -39,10 +39,46 @@
     </div>
 
     <div class="container mb-5">
+        <h3>Doctoral Dissertation</h3>
+        <hr>
+        {% for publication in publications %}
+            {% if publication.is_dissertation %}
+                <div class="publication-section">
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <h5 class="mb-2">{{ publication.title }}</h5>
+                            <small>{{ publication.authors }} ({{ publication.year }}), <em>{{ publication.journal }}</em></small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% if publication.feature_image %}
+                            <div class="col-lg-6 col-md-12">
+                                <img src="{{ publication.feature_image.url }}">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <p>{{ publication.abstract }}</p>
+                            </div>
+                        {% else %}
+                            <div class="col-lg-12 col-md-12">
+                                <p>{{ publication.abstract }}</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% if publication.doi %}
+                        <div class="row mb-2">
+                            <small><em><a href="{{ publication.doi }}" target="_blank">Full Dissertation</a></em></small>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="container mb-5">
         <h3>Manuscripts in Preparation</h3>
         <hr>
         {% for publication in publications %}
-            {% if not publication.is_published %}
+            {% if not publication.is_published and not publication.is_dissertation %}
                 <div class="publication-section">
                     <div class="row mb-2">
                         <div class="col-lg-12">
