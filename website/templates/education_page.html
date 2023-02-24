@@ -11,7 +11,7 @@
                     <h5>{{ education.degree }} - {{ education.major }}</h5>
                     <p>
                         <b>{{ education.school }}</b>, <em>{{ education.city }}, {{ education.state }}</em><br/>
-                        Awarded {{ education.graduation_date }}
+                        Awarded {{ education.graduation_date|date:"F Y" }}
                     </p>
                 </div>
                 <div class="row">

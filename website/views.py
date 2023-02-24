@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import Education, Publication
+from . models import Education, WorkExperience, Publication
 
 def home_page(request):
     context = {}
@@ -23,3 +23,12 @@ def education_page(request):
     }
 
     return render(request, 'education_page.html', context)
+
+def experience_page(request):
+    experiences = WorkExperience.objects.all().order_by('-date_started')
+
+    context = {
+        'experiences': experiences,
+    }
+
+    return render(request, 'experience_page.html', context)
